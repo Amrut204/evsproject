@@ -9,7 +9,7 @@ require("dotenv").config();   // ✅ load environment variables
 const app = express();
 
 // ✅ Connect to MongoDB process.env.MONGO_URL
-mongoose.connect(MONGO_URL, {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
